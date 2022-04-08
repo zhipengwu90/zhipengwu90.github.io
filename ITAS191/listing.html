@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream House</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="css/listingStyle.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <!--navigation bar on top -->
+    <nav id="navsize" class="navbar navbar-expand-md fixed-top navbar-light ">
+        <div class="container">
+            <a id="logosize" class="navbar-brand d-flex align-items-center" href="index.html"><img src="img/logo.png" alt="Logo"
+                    style="width:40px;" class="rounded-pill"><span class="text-danger">Dream House</span> </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-md-auto mb-md-0" id="navfont">
+                    <li class="nav-item">
+                        <a class="nav-link btn " aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link btn" href="market.html">Market</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link btn active" href="listing.html">Listing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn " href="about.html">About</a>
+                    </li>
+                </ul>
+                <!-- sigu up and login -->
+                <div class="text-center">
+                    <span class="text-info text-underline-hover" data-bs-toggle="modal"
+                        data-bs-target="#signUp">Register</span><span class="text-info">/</span>
+                    <span class="text-info text-underline-hover me-2" data-bs-toggle="modal"
+                        data-bs-target="#login">Login</span>
+                </div>
+                <!-- Seach bar -->
+                <div class="search-box">
+                    <button class="btn-search"><img src="img/search.png" alt="search" style="width:30px;"></button>
+                    <input type="text" class="input-search text-info" placeholder="Type to Search...">
+                </div>
+
+
+            </div>
+        </div>
+    </nav>
+    <!-- The Modal 1 singup-->
+    <div class="modal fade" id="signUp">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <img class="mb-0" src="img/logo.png" alt="" width="65" height="65">
+                    <h4 class="modal-title">Sign Up</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form action=https://dev.itas.ca/~croftd/processForm.php method="post">
+                        <div class="text-muted mb-1"> <span class="required">*</span>Required</div>
+                        <div class="form-floating mb-2">
+                            <input type="text" id="firstName" class="form-control" placeholder="First Name" required
+                                autofocus>
+                            <label for="firstName"> <span class="required">* </span>First Name</label>
+                        </div>
+                        <div class="form-floating mb-2">
+                            <input type="text" id="lastName" class="form-control" placeholder="Last Name" required>
+                            <label for="lastName"><span class="required">* </span>Last Name</label>
+                        </div>
+
+                        <div class="form-floating mb-2">
+                            <input type="email" id="inputEmail" class="form-control" placeholder="Email address"
+                                required>
+                            <label for="inputEmail"><span class="required">* </span>Email address</label>
+                        </div>
+
+                        <div class="form-floating mb-2">
+                            <input type="password" id="inputPassword" class="form-control" placeholder="Password"
+                                required>
+                            <label for="inputPassword"><span class="required">* </span>Password</label>
+                        </div>
+                        <div id="message">
+                            <div class="text-muted">Password must contain the following:</div>
+                            <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                            <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                            <p id="number" class="invalid">A <b>number</b></p>
+                            <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                        </div>
+                        <div class="form-floating mb-2 ">
+                            <input type="password" id="rePassword" class="form-control" placeholder="Confirm Password"
+                                required>
+                            <label for="rePassword"><span class="required">* </span>Confirm Password</label>
+                        </div>
+
+                        <div class="text-muted text-center mb-4"> By clicking Join now, you agree to the <a
+                                class="text-decoration-none text-color-hover" href="#">terms of use</a> </div>
+                        <div class="d-flex justify-content-end">
+                            <button type="button" class="btn btn-danger me-2" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Join now</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- The Modal 2 login-->
+    <div class="modal fade" id="login">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <img class="mb-0" src="img/logo.png" alt="" width="65" height="65">
+                    <h4 class="modal-title">Log in</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body text-center">
+
+
+                    <!-- <h1 class="h3 mb-3 font-weight-normal">Sign in</h1> -->
+                    <form action=https://dev.itas.ca/~croftd/processForm.php method="post">
+                        <div class="form-floating mb-2">
+                            <input type="email" id="email" class="form-control" placeholder="Email address">
+                            <label for="email">Email address</label>
+                        </div>
+                        <div class="form-floating ">
+                            <input type="password" id="password" class="form-control" placeholder="Password" required>
+                            <label for="password">Password</label>
+                        </div>
+                        <div class="checkbox mb-3">
+
+                            <label>
+                                <input type="checkbox" value="remember-me"> Remember me
+                            </label>
+                        </div>
+                        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="pt-5 mt-5 ">
+        <div class="container mt-5 pt-5">
+            <div class="col-sm-12">
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="listing.html">Listing</a></li>
+                    <li class="breadcrumb-item active">144 POLY STREET</li>
+                </ul>
+            </div>
+
+            <div class="row g-5">
+                <div class="col-12">
+                    <h3 class="pb-4 mb-4 fst-italic border-bottom">
+                        144 POLY STREET
+                    </h3>
+                    <h2 class="text-end">$679,200</h2>
+
+                </div>
+            </div>
+            <table class="table table-hover">
+
+                <tbody>
+                    <tr>
+
+                        <th>Address</th>
+                        <td>144 POLY STREET, NANAIMO</td>
+
+                    </tr>
+                    <tr>
+                        <th>Province</th>
+                        <td>British Columbia</td>
+
+                    </tr>
+                    <tr>
+                        <th>Country</th>
+                        <td>Canada</td>
+                    </tr>
+                    <tr>
+                        <th>Price</th>
+                        <td>$679,200</td>
+                    </tr>
+                    <tr>
+                        <th>Board Number:</th>
+                        <td>890822</td>
+                    </tr>
+
+                    <tr>
+                        <th>Bedrooms:</th>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <th>Bathrooms</th>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <th>Square Footage:</th>
+                        <td>2220 Sq Ft</td>
+                    </tr>
+                    <tr>
+                        <th>Property Type:</th>
+                        <td>Single Family</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="jumbotron mt-4">
+                <h5>Detailed introduction</h5>
+                <p class="text-muted">Welcome to this 4 bedroom, 2 bathroom home with an unauthorized 2 bedroom, 1
+                    bathroom additional accommodation. The main floor has a lg living room w/ a den, open kitchen, 2
+                    bedrooms, 4 piece bathroom and a spacious laundry room. The downstairs suite has 2 bedrooms,
+                    kitchen, 4-piece bathroom & a den off the living room. The home also has a newer gas furnace. The
+                    house offers a sunny, south facing deck. The zoning (light industrial I1) allows for many different
+                    uses such as a mini storage, veterinary clinic, & much more! The property is flat making the entire
+                    piece of land usable & perfect for RV parking. Located in Central Nanaimo, w/ access to Beban park,
+                    aquatic centre, Nanaimo Golf Club, hiking & biking trails, beaches, restaurants, cafes and shopping
+                    as well as easy commutes via seaplanes, & B.C Ferries with daily flights & sailings to the lower
+                    mainland, & surrounding islands. Information package available. All data & information should be
+                    verified if fundamental to the purchase.
+
+                </p>
+
+            </div>
+        </div>    
+    </div>
+
+
+
+
+            <!-- Slideshow Gallery -->
+            <!-- <h2 style="text-align:center">Photo Gallery</h2> -->
+
+            <div class="container">
+                <div class="mySlides">
+                    <div class="numbertext">1 / 6</div>
+                    <img src="img/slice1.jpg" alt="house picture" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">2 / 6</div>
+                    <img src="img/slice2.jpg" alt="house picture" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">3 / 6</div>
+                    <img src="img/slice3.jpg" alt="house picture" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">4 / 6</div>
+                    <img src="img/slice4.jpg" alt="house picture" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">5 / 6</div>
+                    <img src="img/slice5.jpg" alt="house picture" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">6 / 6</div>
+                    <img src="img/slice6.jpg" alt="house picture" style="width:100%">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <img class="demo cursor" src="img/slice1.jpg" style="width:100%" onclick="currentSlide(1)"
+                            alt="The House">
+                    </div>
+                    <div class="col">
+                        <img class="demo cursor" src="img/slice2.jpg" style="width:100%" onclick="currentSlide(2)"
+                            alt="Bedroom 1">
+                    </div>
+                    <div class="col">
+                        <img class="demo cursor" src="img/slice3.jpg" style="width:100%" onclick="currentSlide(3)"
+                            alt="Kitchen">
+                    </div>
+                    <div class="col">
+                        <img class="demo cursor" src="img/slice4.jpg" style="width:100%" onclick="currentSlide(4)"
+                            alt="Washrom">
+                    </div>
+                    <div class="col">
+                        <img class="demo cursor" src="img/slice5.jpg" style="width:100%" onclick="currentSlide(5)"
+                            alt="Living Room">
+                    </div>
+                    <div class="col">
+                        <img class="demo cursor" src="img/slice6.jpg" style="width:100%" onclick="currentSlide(6)"
+                            alt="Bedroom 2">
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="callme">
+
+                <img src="img/phone.png" class="text-underline-hover" alt="phone icon" data-bs-toggle="modal"
+                    data-bs-target="#contactUs">
+            </div>
+
+            <!-- The Modal 3 contact us-->
+            <div class="modal fade" id="contactUs">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <img class="mb-0" src="img/logo.png" alt="" width="45" height="45">
+                            <h4 class="modal-title">Contact us</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+
+                        </div>
+
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <div class="text-muted">Please enter your details and we'll call you back! </div><br>
+                            <form action=https://dev.itas.ca/~croftd/processForm.php method="post">
+
+                                <div class="text-muted mb-1"> <span class="required">*</span>Required</div>
+                                <!-- name -->
+                                <div class="form-floating mb-2">
+                                    <input type="text" id="contactName" class="form-control" placeholder="Name"
+                                        required>
+                                    <label for="contactName"> <span class="required">* </span>Name</label>
+                                </div>
+
+
+                                <!-- phone -->
+                                <div class="form-floating mb-2">
+                                    <input type="text" id="contactPhone" class="form-control" placeholder="Password"
+                                        required>
+                                    <label for="contactPhone"><span class="required">* </span>Phone</label>
+                                </div>
+
+                                <!-- email -->
+                                <div class="form-floating mb-2">
+                                    <input type="email" id="contactEmail" class="form-control"
+                                        placeholder="Email address">
+                                    <label for="contactEmail">Email address</label>
+                                </div>
+
+                                <!-- date -->
+                                <div class="form-floating mb-2">
+                                    <input type="date" id="contactDate" class="form-control">
+                                    <label for="contactPhone"><span class="required">* </span>Prefer to call on </label>
+                                </div>
+
+                                <!-- gender -->
+                                <div class=" mb-2 ">
+                                    <select class="form-select py-3 form-control">
+                                        <option selected>--Gender--</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                        <option value="prefer not to say">Prefer not to say</option>
+                                    </select>
+                                </div>
+                                <!-- comments -->
+                                <div class="form-floating mb-2 ">
+
+                                    <textarea class="form-control" rows="20" id="comment" name="text"></textarea>
+                                    <label for="comment">Comments</label>
+                                </div>
+                                <!-- button -->
+
+                                <div class="mt-5 d-flex justify-content-end">
+                                    <button type="button" class="btn btn-danger me-2"
+                                        data-bs-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Send</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <div class="container">
+                <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                    <div class="col-md-4 d-flex align-items-center">
+                        <span class="text-muted">&copy; 2021 Company, Inc</span>
+                    </div>
+                    <p class="float-end"><a href="#">Back to top</a></p>
+
+
+                </footer>
+            </div>
+
+            <script>
+                // When the user scrolls down 50px from the top of the document, resize the navbar's padding and the logo's font size
+                // Nav bar
+                window.onscroll = function () { scrollFunction() };
+
+                function scrollFunction() {
+
+
+                    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                        document.getElementById("navsize").style.padding = "1px 1px";
+                        document.getElementById("logosize").style.fontSize = "25px";
+                        document.getElementById("navsize").style.backgroundColor = "#282935";
+                        document.getElementById("navsize").classList.add('navbar-dark')
+                        document.getElementById("navsize").classList.remove('navbar-light')
+
+
+
+
+                    } else {
+                        document.getElementById("navsize").style.padding = "50px 10px";
+                        document.getElementById("logosize").style.fontSize = "35px";
+                        document.getElementById("navsize").style.backgroundColor = "#F8F9FA";
+                        document.getElementById("navsize").classList.add('navbar-light')
+                        document.getElementById("navsize").classList.remove('navbar-dark')
+                    }
+                }
+
+
+
+                //  form validation
+                //register
+                const email = document.querySelector("input[type=email]");
+                email.addEventListener("input", function (event) {
+                    if (email.validity.typeMismatch) {
+                        email.setCustomValidity("I am expecting an e-mail address!");
+                        event.preventDefault()
+                    } else {
+                        email.setCustomValidity("");
+                    }
+                });
+
+                //phone number
+                var phoneNo = document.getElementById("contactPhone");
+                var phoneStyle = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+                phoneNo.addEventListener("input", function (event) {
+                    if (phoneNo.value.match(phoneStyle)) {
+                        phoneNo.setCustomValidity("");
+                    } else {
+                        phoneNo.setCustomValidity("Please enter correct phone number");
+                    }
+                });
+
+
+
+                // password
+
+                var myInput = document.getElementById("inputPassword");
+                var letter = document.getElementById("letter");
+                var capital = document.getElementById("capital");
+                var number = document.getElementById("number");
+                var length = document.getElementById("length");
+
+                // When the user clicks on the password field, show the message box
+                myInput.onfocus = function () {
+                    document.getElementById("message").style.display = "block";
+                }
+
+                // When the user clicks outside of the password field, hide the message box
+                myInput.onblur = function () {
+                    document.getElementById("message").style.display = "none";
+                }
+
+                // When the user starts to type something inside the password field
+                myInput.onkeyup = function () {
+                    // Validate lowercase letters
+                    var lowerCaseLetters = /[a-z]/g;
+                    if (myInput.value.match(lowerCaseLetters)) {
+                        letter.classList.remove("invalid");
+                        letter.classList.add("valid");
+                    } else {
+                        letter.classList.remove("valid");
+                        letter.classList.add("invalid");
+                    }
+
+                    // Validate capital letters
+                    var upperCaseLetters = /[A-Z]/g;
+                    if (myInput.value.match(upperCaseLetters)) {
+                        capital.classList.remove("invalid");
+                        capital.classList.add("valid");
+                    } else {
+                        capital.classList.remove("valid");
+                        capital.classList.add("invalid");
+                    }
+
+                    // Validate numbers
+                    var numbers = /[0-9]/g;
+                    if (myInput.value.match(numbers)) {
+                        number.classList.remove("invalid");
+                        number.classList.add("valid");
+                    } else {
+                        number.classList.remove("valid");
+                        number.classList.add("invalid");
+                    }
+
+                    // Validate length
+                    if (myInput.value.length >= 8) {
+                        length.classList.remove("invalid");
+                        length.classList.add("valid");
+                    } else {
+                        length.classList.remove("valid");
+                        length.classList.add("invalid");
+                    }
+                }
+
+                //confirm password
+
+
+                const pw1 = document.querySelector('#inputPassword');
+                const pw2 = document.querySelector('#rePassword');
+
+                pw2.addEventListener("input", function (event) {
+                  
+                    if (pw1.value == pw2.value) {
+                        pw2.setCustomValidity("");
+                    } else {
+                        pw2.setCustomValidity("Password did not match");
+                    }
+                });
+
+
+
+                //disable past date
+
+                var todayDate = new Date();
+                var month = todayDate.getMonth() + 1;
+                var year = todayDate.getUTCFullYear() - 0;
+                var tdate = todayDate.getDate();
+                if (month < 10) {
+                    month = "0" + month
+                }
+                if (tdate < 10) {
+                    tdate = "0" + tdate;
+                }
+                var minDate = year + "-" + month + "-" + tdate;
+                document.getElementById("contactDate").setAttribute("min", minDate);
+
+
+                //slice
+                var slideIndex = 1;
+                showSlides(slideIndex);
+
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    var dots = document.getElementsByClassName("demo");
+                    var captionText = document.getElementById("caption");
+                    if (n > slides.length) { slideIndex = 1 }
+                    if (n < 1) { slideIndex = slides.length }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " active";
+                    captionText.innerHTML = dots[slideIndex - 1].alt;
+                }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </script>
+
+            <script
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAM53d-ZeujlwXDg1D4a-hy47bcsKVRe5E&callback=initMap"
+                async></script>
+
+
+
+
+</body>
+
+</html>

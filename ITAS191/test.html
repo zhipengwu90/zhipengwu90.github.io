@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream House</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="css/mystyle.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <form action=https://dev.itas.ca/~croftd/processForm.php method="post">
+
+
+        Please input a valid postal code:
+        <input id="postalcode" name="postalcode" type="text"><br>
+        <input type="submit">
+    </form>
+    <p id="demo"></p>
+
+    <script>
+     
+        // Get the value of the input field with id="numb"
+        var postal = document.getElementById("postalcode");
+        var regex = /^[ABCEGHJKLMNPRSTVXY]\d[ABCEGHJKLMNPRSTVWXYZ]( )?\d[ABCEGHJKLMNPRSTVWXYZ]\d$/i; 
+        postal.addEventListener("input", function (event) {
+        
+        if (postal.value(regex)) {
+            postal.setCustomValidity("");
+        } else { 
+            console.log("This is not a valid postal code");
+            text = "This is not valid";
+            e.preventDefault();
+            valid = false; 
+        }
+        document.getElementById("demo").innerHTML = text;
+        return valid;
+    } 
+
+
+    </script>
+
+
+</body>

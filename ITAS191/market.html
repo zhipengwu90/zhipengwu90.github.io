@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream House</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="css/mystyle.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+
+
+
+
+
+<body>
+ 
+
+    <!--navigation bar on top -->
+    <nav id="navsize" class="navbar navbar-expand-md fixed-top navbar-light ">
+        <div class="container">
+            <a id="logosize" class="navbar-brand d-flex align-items-center" href="index.html"><img src="img/logo.png" alt="Logo"
+                    style="width:40px;" class="rounded-pill"><span class="text-danger">Dream House</span> </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-md-auto mb-md-0" id="navfont">
+                    <li class="nav-item">
+                        <a class="nav-link btn " aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link btn active" href="market.html">Market</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link btn" href="listing.html">Listing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn " href="about.html">About</a>
+                    </li>
+                </ul>
+                <!-- sigu up and login -->
+                <div class="text-center">
+                    <span class="text-info text-underline-hover" data-bs-toggle="modal"
+                        data-bs-target="#signUp">Register</span><span class="text-info">/</span>
+                    <span class="text-info text-underline-hover me-2" data-bs-toggle="modal"
+                        data-bs-target="#login">Login</span>
+                </div>
+                <!-- Seach bar -->
+                <div class="search-box">
+                    <button class="btn-search"><img src="img/search.png" alt="search" style="width:30px;"></button>
+                    <input type="text" class="input-search text-info" placeholder="Type to Search...">
+                </div>
+
+
+            </div>
+        </div>
+    </nav>
+    <!-- The Modal 1 singup-->
+    <div class="modal fade" id="signUp">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <img class="mb-0" src="img/logo.png" alt="" width="65" height="65">
+                    <h4 class="modal-title">Sign Up</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form action=https://dev.itas.ca/~croftd/processForm.php method="post">
+                        <div class="text-muted mb-1"> <span class="required">*</span>Required</div>
+                        <div class="form-floating mb-2">
+                            <input type="text" id="firstName" class="form-control" placeholder="First Name" required
+                                autofocus>
+                            <label for="firstName"> <span class="required">* </span>First Name</label>
+                        </div>
+                        <div class="form-floating mb-2">
+                            <input type="text" id="lastName" class="form-control" placeholder="Last Name" required>
+                            <label for="lastName"><span class="required">* </span>Last Name</label>
+                        </div>
+
+                        <div class="form-floating mb-2">
+                            <input type="email" id="inputEmail" class="form-control" placeholder="Email address"
+                                required>
+                            <label for="inputEmail"><span class="required">* </span>Email address</label>
+                        </div>
+
+                        <div class="form-floating mb-2">
+                            <input type="password" id="inputPassword" class="form-control" placeholder="Password"
+                                required>
+                            <label for="inputPassword"><span class="required">* </span>Password</label>
+                        </div>
+                        <div id="message">
+                            <div class="text-muted">Password must contain the following:</div>
+                            <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+                            <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                            <p id="number" class="invalid">A <b>number</b></p>
+                            <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+                        </div>
+                        <div class="form-floating mb-2 ">
+                            <input type="password" id="rePassword" class="form-control" placeholder="Confirm Password"
+                                required>
+                            <label for="rePassword"><span class="required">* </span>Confirm Password</label>
+                        </div>
+
+                        <div class="text-muted text-center mb-4"> By clicking Join now, you agree to the <a
+                                class="text-decoration-none text-color-hover" href="#">terms of use</a> </div>
+                        <div class="d-flex justify-content-end">
+                            <button type="button" class="btn btn-danger me-2" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Join now</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- The Modal 2 login-->
+    <div class="modal fade" id="login">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <img class="mb-0" src="img/logo.png" alt="" width="65" height="65">
+                    <h4 class="modal-title">Log in</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body text-center">
+
+
+                    <!-- <h1 class="h3 mb-3 font-weight-normal">Sign in</h1> -->
+                    <form action=https://dev.itas.ca/~croftd/processForm.php method="post">
+                        <div class="form-floating mb-2">
+                            <input type="email" id="email" class="form-control" placeholder="Email address">
+                            <label for="email">Email address</label>
+                        </div>
+                        <div class="form-floating ">
+                            <input type="password" id="password" class="form-control" placeholder="Password" required>
+                            <label for="password">Password</label>
+                        </div>
+                        <div class="checkbox mb-3">
+
+                            <label>
+                                <input type="checkbox" value="remember-me"> Remember me
+                            </label>
+                        </div>
+                        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                    </form>
+                </div>
+
+                <!-- Modal footer -->
+                <!-- <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    </div>
+     -->
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="p-5 mt-5">
+
+        <div class="container mt-5 py-5">
+            <div class="col-sm-12">
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="market.html">Market Updates</a></li>
+                    <li class="breadcrumb-item active">Nanaimo Real Estate Market Stats</li>
+                </ul>
+            </div>
+
+            <div class="row g-5">
+                <div class="col-md-8">
+                    <h3 class="blog-post-title pb-4 mb-4 fst-italic border-bottom">
+                        Nanaimo Real Estate Market Stats
+                    </h3>
+
+                    <article class="blog-post">
+                        <p class="blog-post-meta text-muted">January 1, 2021 by <a
+                                href="http://www.vireb.com/">VIREB</a>
+                        </p>
+                        <h5>The predominant theme running through the housing market in the Vancouver Island Real Estate
+                            Board (VIREB) area is one of &#8220;A different month, but the same issues continue&#8221;
+                        </h5>
+                        <br>
+                        <div class="text-center"><img src="img/market_research.png" alt="market research" style="width:80%; height: auto;">
+                        </div>
+                        <p>398 single-family homes sold in October, a 23 three percent decrease from one year ago.
+                            There were 122 condo apartment sales last month, a six percent decrease from October 2020.
+                            In
+                            the
+                            row/townhouse category, 88 units sold compared to 98 the previous October. However, there is
+                            little
+                            doubt that a dearth of active listings is causing the sales decline, and if the supply
+                            increase
+                            so will the number of sales.</p>
+                        <p>Buyers continue to face frustrating hurdles caused by historically low inventory, with little
+                            relief in sight.
+                            Active listings of single-family homes were 46 percent lower last month than in October 2020
+                            and
+                            dropped by 18 percent from September. VIREB’s inventory of condo apartments declined by 63
+                            percent from one year ago and was 26 percent lower than in September. However, there was
+                            some
+                            positive news for townhouse buyers. While active listings in this category dropped by 39
+                            percent
+                            year over year, inventory increased by 13 percent from September.</p>
+                        <p>In its most recent housing forecast, the British Columbia Real Estate Association (BCREA)
+                            stated
+                            that
+                            the supply situation is especially severe in markets outside the Lower Mainland, including
+                       4     Vancouver
+                            Island. Listings activity has been lackluster, and even if sales come back down to long-run
+                            average levels,
+                            total listings would need to nearly double to bring markets back into balance. The road to
+                            doubling
+                            those listings lies in increasing the housing supply.</p>
+                        <blockquote>
+                            <p>“Unless demand drops significantly or more inventory comes online through new
+                                construction,
+                                VIREB’s
+                                inventory situation likely won’t improve,” says Ian Mackay, 2021 VIREB President.</p>
+                        </blockquote>
+                        <p>Mackay welcomes the news that the Government of British Columbia is giving local governments
+                            more
+                            tools and powers to simplify and speed up their development approvals processes, helping to
+                            build the
+                            homes people need more quickly.</p>
+                        <blockquote>
+                            <p>“Real estate is all about supply and demand. New construction isn’t a quick solution, but
+                                it’s the only one
+                                that can address the housing shortage, and, hopefully, temper prices,” said Mackay.</p>
+                        </blockquote>
+                        <p>The board-wide benchmark price of a single-family home reached $757,300 in October, up 31
+                            percent
+                            year over year and an increase from September. In the apartment category, the benchmark
+                            price
+                            hit $397,200 last month, a 30 percent increase from October 2020. The benchmark price of a
+                            townhouse was up by 34 percent year over year.</p><br>
+                        <h3>October 2021 Benchmark Prices</h3>
+                        <ul>
+                            <li><strong>Nanaimo’s benchmark price rose by 28 percent, hitting $755,500</strong></li>
+                            <li>Campbell River, the benchmark price of a single-family home hit $663,000 in September,
+                                up by
+                                28.5% percent from the previous year</li>
+                            <li>Comox Valley, the year-over-year benchmark price rose by 31 percent to $779,000</li>
+                            <li>Cowichan Valley reported a benchmark price of $756,900, an increase of 30 percent from
+                                October 2020</li>
+                            <li>Parksville-Qualicum area saw its benchmark price increase by 34 percent to $887,300</li>
+                            <li>Port Alberni reached $504,000, a 36 percent year-over-year increase</li>
+                            <li>North Island rose by 55 percent, hitting $418,800 in September</li>
+                        </ul>
+                    </article>
+
+
+
+
+
+
+                </div>
+
+                <div class="col-md-4">
+                    <div class="position-sticky" style="top: 3rem;">
+                        <div class="p-4 mb-3 bg-light rounded">
+                            <h4 class="fst-italic">About</h4>
+                            <p class="mb-0">Here are the information about Market updates</p>
+                        </div>
+
+                        <div class="py-3 px-2">
+                            <h4 class="fst-italic">Article</h4>
+                            <ul class=" mb-0">
+                                <li><a class="text-color-hover" href="#">Fall 2021 Canadian Housing Market Outlook</a></li>
+                                <li><a class="text-color-hover" href="#">September 2021 Nanaimo Real Estate Market Stats</a></li>
+                                <li><a class="text-color-hover" href="#">August 2021 Nanaimo Real Estate Market Stats</a></li>
+                                <li><a class="text-color-hover" href="#">July 2021 Nanaimo Real Estate Market Stats</a></li>
+                                <li><a class="text-color-hover" href="#">November 2020</a></li>
+                                <li><a class="text-color-hover" href="#">October 2020</a></li>
+                                <li><a class="text-color-hover" href="#">September 2020</a></li>
+                           
+                            </ul>
+                        </div>
+
+                        <div class="p-4">
+                            <h4 class="fst-italic">Contact me</h4>
+                            <ul class="list-unstyled">
+                                <li>
+                                    Mobile: <a href="250-000-0000">250-000-0000</a>
+                                </li>
+                                <li>
+                                    Email: <a href="mailto:name@properties.com">name@properties.com</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.facebook.com"><img src="img/facebook.png" alt="facebook icon"
+                                            width="28"></a>
+                                    <a href="https://ca.linkedin.com/"><img src="img/linkedin.png" alt="facebook icon"
+                                            width="28"></a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    
+    <div class="callme">
+        <img src="img/phone.png" class="text-underline-hover" alt="phone icon" data-bs-toggle="modal" data-bs-target="#contactUs">
+    </div>
+
+
+
+
+    <!-- The Modal 3 contact us-->
+    <div class="modal fade" id="contactUs">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <img class="mb-0" src="img/logo.png" alt="" width="45" height="45">
+                    <h4 class="modal-title">Contact us</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="text-muted">Please enter your details and we'll call you back! </div><br>
+                    <form action=https://dev.itas.ca/~croftd/processForm.php method="post">
+
+                        <div class="text-muted mb-1"> <span class="required">*</span>Required</div>
+                        <!-- name -->
+                        <div class="form-floating mb-2">
+                            <input type="text" id="contactName" class="form-control" placeholder="Name" required>
+                            <label for="contactName"> <span class="required">* </span>Name</label>
+                        </div>
+
+                        <!-- phone -->
+                        <div class="form-floating mb-2">
+                            <input type="text" id="contactPhone" class="form-control" placeholder="Password" required>
+                            <label for="contactPhone"><span class="required">* </span>Phone</label>
+                        </div>
+
+                        <!-- email -->
+                        <div class="form-floating mb-2">
+                            <input type="email" id="contactEmail" class="form-control" placeholder="Email address">
+                            <label for="contactEmail">Email address</label>
+                        </div>
+
+                        <!-- date -->
+                        <div class="form-floating mb-2">
+                            <input type="date" id="contactDate" class="form-control" >
+                            <label for="contactPhone"><span class="required">* </span>Prefer to call on </label>
+                        </div>
+
+                        <!-- gender -->
+                        <div class=" mb-2 ">
+                            <select class="form-select py-3 form-control">
+                                <option selected>--Gender--</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="prefer not to say">Prefer not to say</option>
+                            </select>
+                        </div>
+                        <!-- comments -->
+                        <div class="form-floating mb-2 ">
+
+                            <textarea class="form-control" rows="20" id="comment" name="text"></textarea>
+                            <label for="comment">Comments</label>
+                        </div>
+                        <!-- button -->
+                        <div class="mt-5 d-flex justify-content-end">
+                            <button type="button" class="btn btn-danger me-2" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <span class="text-muted">&copy; 2021 Company, Inc</span>
+            </div>
+            <p class="float-end"><a href="#">Back to top</a></p>
+
+
+        </footer>
+    </div>
+
+    <script>
+        // When the user scrolls down 50px from the top of the document, resize the navbar's padding and the logo's font size
+        // Nav bar
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+
+
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                document.getElementById("navsize").style.padding = "1px 1px";
+                document.getElementById("logosize").style.fontSize = "25px";
+                document.getElementById("navsize").style.backgroundColor = "#282935";
+                document.getElementById("navsize").classList.add('navbar-dark')
+                document.getElementById("navsize").classList.remove('navbar-light')
+
+
+
+
+            } else {
+                document.getElementById("navsize").style.padding = "50px 10px";
+                document.getElementById("logosize").style.fontSize = "35px";
+                document.getElementById("navsize").style.backgroundColor = "#F8F9FA";
+                document.getElementById("navsize").classList.add('navbar-light')
+                document.getElementById("navsize").classList.remove('navbar-dark')
+            }
+        }
+
+        
+
+        //  form validation
+        //register
+        const email = document.querySelector("input[type=email]");
+        email.addEventListener("input", function (event) {
+            if (email.validity.typeMismatch) {
+                email.setCustomValidity("I am expecting an e-mail address!");
+                event.preventDefault()
+            } else {
+                email.setCustomValidity("");
+            }
+        });
+
+        //phone number
+        var phoneNo = document.getElementById("contactPhone");
+        var phoneStyle = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+        phoneNo.addEventListener("input", function (event) {
+            if (phoneNo.value.match(phoneStyle)) {
+                phoneNo.setCustomValidity("");
+            } else {
+                phoneNo.setCustomValidity("Please enter correct phone number");
+            }
+        });
+
+
+
+        // password
+
+        var myInput = document.getElementById("inputPassword");
+        var letter = document.getElementById("letter");
+        var capital = document.getElementById("capital");
+        var number = document.getElementById("number");
+        var length = document.getElementById("length");
+
+        // When the user clicks on the password field, show the message box
+        myInput.onfocus = function () {
+            document.getElementById("message").style.display = "block";
+        }
+
+        // When the user clicks outside of the password field, hide the message box
+        myInput.onblur = function () {
+            document.getElementById("message").style.display = "none";
+        }
+
+        // When the user starts to type something inside the password field
+        myInput.onkeyup = function () {
+            // Validate lowercase letters
+            var lowerCaseLetters = /[a-z]/g;
+            if (myInput.value.match(lowerCaseLetters)) {
+                letter.classList.remove("invalid");
+                letter.classList.add("valid");
+            } else {
+                letter.classList.remove("valid");
+                letter.classList.add("invalid");
+            }
+
+            // Validate capital letters
+            var upperCaseLetters = /[A-Z]/g;
+            if (myInput.value.match(upperCaseLetters)) {
+                capital.classList.remove("invalid");
+                capital.classList.add("valid");
+            } else {
+                capital.classList.remove("valid");
+                capital.classList.add("invalid");
+            }
+
+            // Validate numbers
+            var numbers = /[0-9]/g;
+            if (myInput.value.match(numbers)) {
+                number.classList.remove("invalid");
+                number.classList.add("valid");
+            } else {
+                number.classList.remove("valid");
+                number.classList.add("invalid");
+            }
+
+            // Validate length
+            if (myInput.value.length >= 8) {
+                length.classList.remove("invalid");
+                length.classList.add("valid");
+            } else {
+                length.classList.remove("valid");
+                length.classList.add("invalid");
+            }
+        }
+
+        //confirm password
+
+
+        const pw1 = document.querySelector('#inputPassword');
+        const pw2 = document.querySelector('#rePassword');
+
+        pw2.addEventListener("input", function (event) {
+
+            if (pw1.value == pw2.value) {
+                pw2.setCustomValidity("");
+            } else {
+                pw2.setCustomValidity("Password did not match");
+            }
+        });
+
+
+
+        //disable past date
+
+        var todayDate = new Date();
+        var month = todayDate.getMonth() + 1;
+        var year = todayDate.getUTCFullYear() - 0;
+        var tdate = todayDate.getDate();
+        if (month < 10) {
+            month = "0" + month
+        }
+        if (tdate < 10) {
+            tdate = "0" + tdate;
+        }
+        var minDate = year + "-" + month + "-" + tdate;
+        document.getElementById("contactDate").setAttribute("min", minDate);
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAM53d-ZeujlwXDg1D4a-hy47bcsKVRe5E&callback=initMap"
+        async></script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/mystyle.css" />
+  <link rel="icon" href="imgs/favicon.ico" type="image/x-icon">
+  <style>
+    body {
+      background-image: url("imgs/background.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <div class="container mt-5 text-white rounded">
+    <div class="row">
+      <div class="col-md-10 px-0">
+    <img src="imgs/logo.png" alt="Logo"
+          style="width:40px;" class="rounded-pill">
+          <h1 class="ml1 ms-3">
+            <span class="text-wrapper">
+              <span class="line line1"></span>
+              <span class="letters">API WORLD</span>
+              <span class="line line2"></span>
+            </span>
+          </h1>
+          
+
+        <div class="mt-3 ps-3" id="timeAPI">TIME API</div>
+        <select class="bg-transparent  ms-3 timeZone text-white border-0" id="timeZone"
+          aria-label="Default select example">
+          <option selected class="bg-dark" value="America/Vancouver">
+            America/Vancouver
+          </option>
+        </select>
+      </div>
+      <!-- <div class="music-loader ms-4">
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+        <span class="line line3"></span>
+      </div> -->
+    </div>
+  </div>
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-lg-8 col-sm-12">
+        <div class="row">
+          <!-- box 1 -->
+          <div class="col-lg-6 col-md-12 mt-sm-1">
+            <div class="box1 box">
+              <div class="front d-flex align-items-center  justify-content-center  h2 text-white">
+                <h1 class="ml6">
+                  <span class="text-wrapper">
+                    <span class="letters">WHAT TO DO?</span>
+                  </span>
+                </h1>
+
+              </div>
+              <div id="app" class="back p-3"></div>
+            </div>
+          </div>
+
+          <!-- box2 -->
+          <div class="col-lg-6 col-sm-12 mt-sm-1 mt-1">
+            <div class="box2 box">
+              <div class="front d-flex align-items-center  justify-content-center  h2 text-white">
+                <h1 class="ml7">
+                  <span class="text-wrapper">
+                    <span class="letters">HOW OLD ARE YOU?</span>
+                  </span>
+                </h1>
+                
+                
+              </div>
+              <div class="back p-3">
+                <input id="name" type="text" class="form-control w-100" placeholder="Enter your name" />
+                <div id="app2">Loading ...</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- box 3 -->
+        <div class="col-lg-12 mt-lg-3 mt-sm-1 mt-1">
+          <div class="box3 box">
+            <div class="front d-flex align-items-center  justify-content-center  h2 text-white">
+              <h1 class="ml8">
+                <span class="letters-container">
+                  <span class="letters letters-left">A BEER</span>
+                  <span class="letters bang">!?</span>
+                </span>
+                <span class="circle circle-white"></span>
+                <span class="circle circle-dark"></span>
+                <span class="circle circle-container"><span class="circle circle-dark-dashed"></span></span>
+              </h1>
+
+            </div>
+
+          <div class="p-3 back" id="beer"></div>
+
+           
+          </div>
+        </div>
+      </div>
+      <!-- box 4 -->
+      <div class="col-lg-4 col-sm-12 mt-sm-1 mt-1">
+        <div class="col-lg-12">
+          <div class="box4 box">
+
+            <div class="front p-3 pt-5 text-center h2 text-white">
+              FIND A DOG?
+              <img src="imgs/a_dog.gif" class="mt-4" alt="a dog picuture" width="200" />
+            </div>
+            <div class="p-3 back" id="dogPic"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- box 5 -->
+
+      <div class="mt-3 mb-5 col-lg-12">
+        <div class="box5 box ">
+          <div class="front d-flex align-items-center  justify-content-center  h2 text-white">
+            <h1 class="ml15">
+              <span class="word">WHERE</span>
+              <span class="word">ARE</span>
+              <span class="word">YOU</span>
+              <span class="word">!</span>
+            </h1>
+
+
+
+          </div>
+        <div id="yourIP" class="p-3 back"></div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    //world TIme zone dropdown options, js vanilla
+    let selection = document.getElementById("timeZone");
+    let render = (value) => {
+      return `
+  <option class="bg-dark" value=${value}>${value}</option>`;
+    };
+    let getData = (obj) => {
+      for (let data of obj) {
+        selection.innerHTML += render(data);
+      }
+    };
+    //fecth data from API
+    (async function () {
+      let url = new URL(`http://worldtimeapi.org/api/timezone`);
+      let response = await fetch(url);
+      if (response.ok) {
+        // if HTTP-status is 200-299
+        // get the response body (the method explained below)
+        let json = await response.json();
+        getData(json);
+
+      } else {
+        alert(`HTTP-Error: ${response.status}! Please enter a name!!`);
+      }
+    })();
+    //end of world Time
+    //display time base on timeZone;
+    function disp_TZ() {
+      let tz = document.getElementById("timeZone").value;
+      let time = new Date().toLocaleString("en-CA", { timeZone: tz });
+      document.getElementById("timeAPI").innerHTML = time;
+      display();
+    }
+
+    function display() {
+      let mytime = setTimeout("disp_TZ()", 1000);
+    }
+    disp_TZ();
+  </script>
+
+  <script src="js/myjs.js" type="module"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/anime.min.js"></script>
+  <script src="js/anime.js"></script>
+
+</body>
+
+</html>
