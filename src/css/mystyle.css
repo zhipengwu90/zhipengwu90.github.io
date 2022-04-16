@@ -332,7 +332,6 @@ html {
 
 .myName {
   position: relative;
-
   color: rgba(255, 95, 90, 1);
   font-size: 8em;
   font-family: "Times New Roman", serif;
@@ -352,10 +351,7 @@ html {
     font-size: 2em;
   }
 
-
   .myName {
-
-
     font-size: 2em;
     left: 0px;
     font-family: "Times New Roman", serif;
@@ -365,4 +361,9 @@ html {
     width: 100%;
 }
 
+}
+
+
+.text-color-default{
+  color: rgba(255, 230, 193, 1) !important;
 }
