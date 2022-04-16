@@ -261,11 +261,13 @@ html {
 
 
 .card{
+  
   width: 300px;
   height: 70vh;
   overflow: auto;
   background-color: rgba(255,255,255,0.2) !important;
   opacity: 0.7;
+
 }
 
 
