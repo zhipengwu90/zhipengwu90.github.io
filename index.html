@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="src/css/mystyle.css" rel="stylesheet" />
-  <link href="src/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- <link href="src/css/bootstrap.min.css" rel="stylesheet" /> -->
   <title>Wu's Portfolio</title>
   <link rel="icon" href="src/imgs/favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,22 +17,20 @@
 
 <body>
 
-  <header class="sticky-top">
-    <div class="d-flex flex-column flex-md-row align-items-center box-banner">
-      <a href="/" class="ms-lg-5 d-flex align-items-center nav-text-color text-decoration-none">
-        <img src="src/imgs/logo.png" width="30px" height="30px" />
-        <span class="fs-4">Wu's Portfolio</span>
-      </a>
+  <header class="nav">
 
-      <nav class="d-inline-flex ms-md-auto me-lg-4">
-        <a class="me-3 py-2 nav-text-color-actived text-decoration-none" href="index.html">Home</a>
-        <a class="me-3 py-2 nav-text-color text-decoration-none"
-          href="https://www.linkedin.com/in/zhipengwu90">Linkedin</a>
-        <a class="me-3 py-2 nav-text-color text-decoration-none" href="https://github.com/zhipengwu90">Github</a>
-        <a class="me-3 py-2 nav-text-color text-decoration-none" href="about.html">About</a>
+    <a href="/" class="logo_tittle">
+      <img src="src/imgs/logo.png" class="myLogo" alert="web logo" width="40px" height="40px" />
+      <span class="tittle">Wu's Portfolio</span>
+    </a>
+    <ul class="navList">
+      <li><a class="nav-text-color nav-text-color-actived" href="index.html">Home</a></li>
+      <li><a class="nav-text-color" href="https://www.linkedin.com/in/zhipengwu90">Linkedin<a></li>
+      <li><a class="nav-text-color" href="https://github.com/zhipengwu90">Github</a></li>
+      <li><a class="nav-text-color" href="about.html">About</a></li>
+    </ul>
 
-      </nav>
-    </div>
+
 
   </header>
 
@@ -66,113 +64,101 @@
 
       </div>
 
-      <div class="container mb-5" id="section2">
-        <div class="wrapper">
-          <!-- API world -->
-          <div class="card m-2">
-            <a href="https://zhipengwu90.github.io/ITAS192_Final_Project/" class="text-decoration-none">
+      <div class="container context" id="section2">
+        <!-- portfolio World -->
+        <div class="card">
+          <a href="http://code-master.ca/" class="text-decoration-none">
+            <div class="card-grid">
+
+              <img src="src/imgs/portfolio.png" class="card-img-top" alt="...">
+            </div>
+            <div class="card-grid">
+              <h5 class="card-title">Wu's Portfolio</h5>
+              <p class="card-text">This is my portfolio page to display my projects. The website uses a flexbox layout and grid layout.  </p>
+            </div>
+          </a>
+        </div>
+        <!-- API World -->
+        <div class="card">
+          <a href="https://zhipengwu90.github.io/ITAS192_Final_Project/" class="text-decoration-none">
+            <div class="card-grid">
+
               <img src="src/imgs/api-word.png" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">ITAS192 Final Project</h5>
-                <p class="card-text mb-1">This project is using basic and moderately advanced JavaScript (react),
-                  testing (Cypress unit test and E2E test). This is a small web application that uses different APIs to
-                  fetch the data. </p>
+            </div>
+            <div class="card-grid">
+              <h5 class="card-title">ITAS192 Final Project</h5>
+              <p class="card-text">This project is using basic and moderately advanced JavaScript (react),
+                testing (Cypress unit test and E2E test). This is a small web application that uses different APIs to
+                fetch the data. </p>
+            </div>
+          </a>
+        </div>
+        <!-- dream house -->
+        <div class="card">
+          <a href="https://zhipengwu90.github.io/ITAS191/index.html" class="text-decoration-none">
 
-              </div>
-            </a>
-          </div>
-          <!-- Dream House -->
-          <div class="card m-2 ">
-            <a href="https://zhipengwu90.github.io/ITAS191/index.html" class="text-decoration-none">
+            <div class="card-grid">
               <img src="src/imgs/dream_house.png" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">ITAS191 Final Project</h5>
-                <p class="card-text mb-1">This website is my final project for ITAS 191 from my first semester. The
-                  website only used HTML, CSS/layout (using Bootstrap) and some simple JavaScript (No react, Vue or
-                  other framework). </p>
+            </div>
+            <div class="card-grid">
 
-              </div>
-            </a>
-          </div>
-          <!-- Covid data -->
-          <div class="card m-2 ">
-            <a href="https://zhipengwu90.github.io/ITAS192_Covid_data/" class="text-decoration-none">
+              <h5 class="card-title">ITAS191 Final Project</h5>
+              <p class="card-text">This website is my final project for ITAS 191 from my first semester. The
+                website only used HTML, CSS/layout (using Bootstrap) and some simple JavaScript (No react, Vue or
+                other framework) </p>
+            </div>
+          </a>
+        </div>
+        <!-- covid data -->
+        <div class="card">
+          <a href="https://zhipengwu90.github.io/ITAS192_Covid_data/" class="text-decoration-none">
+            <div class="card-grid">
               <img src="src/imgs/covid-data.png" class="card-img-top" alt="...">
-              <div class="card-body ">
-                <h5 class="card-title">ITAS192 Covid data Lab</h5>
-                <p class="card-text mb-1">This is ITAS 192 (Introduction to Client-Side Programming) lab. This is a
-                  dashboard that displays data from an external API that has COVID-19 data available publicly. This web
-                  application only used Vanilla JS.</p>
-
-              </div>
-            </a>
-          </div>
-          <!-- rabbit data -->
-          <div class="card m-2 ">
-            <a href="https://zhipengwu90.github.io/ITAS192_Rabbit_Lab/" class="text-decoration-none">
-              <img src="src/imgs/rabbit.jpg" class="card-img-top" alt="...">
-              <div class="card-body ">
-                <h5 class="card-title">ITAS192 Rabbit Olympic Racing</h5>
-                <p class="card-text mb-1">This is ITAS 192 Rabbit Olympic Racing lab. This lab is practicing the JS
-                  class function, Callbacks, and JS Document Object Model (DOM). This website only used Vanilla JS.</p>
-
-              </div>
-            </a>
-          </div>
-          <!-- Fever scanner -->
-          <div class="card m-2 ">
-            <a href="https://github.com/zhipengwu90/FeverScanner" class="text-decoration-none">
-              <img src="src/imgs/fever_scanner.jpg" class="card-img-top" alt="...">
-              <div class="card-body ">
-                <h5 class="card-title">ITAS 164 Final Project</h5>
-                <p class="card-text mb-1">This is ITAS 164 - IT Project Management group project. The project is to
-                  create a fever scanner to monitor the users' body temperature. The users will scan their NFC tags to
-                  identify their IDs, then trigger the thermal imaging camera to start taking the body temperature</p>
-
-              </div>
-            </a>
-          </div>
-
-          <!-- coming soon -->
-          <div class="card m-2 ">
-            <a href="#" class="text-decoration-none">
-              <img src="src/imgs/coming_soon.jpg" class="card-img-top" alt="...">
-              <div class="card-body ">
-                <h5 class="card-title">Coming Soon....</h5>
-                <p class="card-text mb-1"></p>
-
-              </div>
-            </a>
-          </div>
-          <!-- coming soon -->
-          <div class="card m-2 ">
-            <a href="#" class="text-decoration-none">
-              <img src="src/imgs/coming_soon.jpg" class="card-img-top" alt="...">
-              <div class="card-body ">
-                <h5 class="card-title">Coming Soon....</h5>
-                <p class="card-text mb-1"></p>
-
-              </div>
-            </a>
-          </div>
-          <!-- coming soon -->
-          <div class="card m-2 ">
-            <a href="#" class="text-decoration-none">
-              <img src="src/imgs/coming_soon.jpg" class="card-img-top" alt="...">
-              <div class="card-body ">
-                <h5 class="card-title">Coming Soon....</h5>
-                <p class="card-text mb-1"></p>
-
-              </div>
-            </a>
-          </div>
-
+            </div>
+            <div class="card-grid">
+              <h5 class="card-title">ITAS192 Covid data Lab</h5>
+              <p class="card-text">This is ITAS 192 (Introduction to Client-Side Programming) lab. This is a
+                dashboard that displays data from an external API that has COVID-19 data available publicly. This web
+                application only used Vanilla JS. </p>
+            </div>
+          </a>
 
         </div>
+        <!-- rabit -->
+        <div class="card">
+          <a href="https://zhipengwu90.github.io/ITAS192_Rabbit_Lab/" class="text-decoration-none">
+            <div class="card-grid">
+              <img src="src/imgs/rabbit.jpg" class="card-img-top" alt="...">
+            </div>
+            <div class="card-grid">
+              <h5 class="card-title">ITAS192 Rabbit Olympic Racing</h5>
+              <p class="card-text">This is ITAS 192 Rabbit Olympic Racing lab. This lab is practicing the JS
+                class function, Callbacks, and JS Document Object Model (DOM). This website only used Vanilla JS. </p>
+            </div>
+          </a>
+        </div>
+        <!-- fever scan -->
+        <div class="card">
+          <a href="https://github.com/zhipengwu90/FeverScanner" class="text-decoration-none">
+            <div class="card-grid">
+              <img src="src/imgs/fever_scanner.jpg" class="card-img-top" alt="...">
+            </div>
+            <div class="card-grid">
+              <h5 class="card-title">ITAS 164 Final Project</h5>
+              <p class="card-text">This is ITAS 164 - IT Project Management group project. The project is to
+                create a fever scanner to monitor the users' body temperature. The users will scan their NFC tags to
+                identify their IDs, then trigger the thermal imaging camera to start taking the body temperature</p>
+            </div>
+          </a>
+        </div>
+
+
 
       </div>
-
     </div>
+
+
+
 
 
 
@@ -182,7 +168,7 @@
 </body>
 
 
-<script src="src/JS/bootstrap.bundle.js"></script>
+
 <script src="src/JS/anime.min.js"></script>
 <script src="src/JS/anime.js"></script>
 <script src="src/JS/myjs.js"></script>

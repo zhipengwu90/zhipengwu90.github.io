@@ -13,11 +13,64 @@
     top: -30px;
 } */
 /* nav bar */
-header {
-  background-color: rgba(27, 32, 45, 1);
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+   css reset
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-.nav-text-color{
+/* end of reset */
+
+
+/* header {
+  background-color: rgba(27, 32, 45, 1);
+} */
+
+/* .nav-text-color{
   color: rgba(255, 230, 193, 1);
 }
 
@@ -26,17 +79,133 @@ header {
 }
 .nav-text-color:hover{
   color: rgb(255, 255, 255);
-}
+} */
 /* nav bar under line */
-.box-banner{
+/* .box-banner{
   border-bottom: 1px solid rgba(255, 230, 193, 0.5);;
+} */
+
+/* header-nav */
+.nav{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+justify-content: center;
+ border-bottom: 1px solid rgba(255, 230, 193, 1); 
+ position: sticky;
+ top: 0;
+ z-index: 999;
+ background-color: rgba(27, 32, 45, 1);
 }
+.nav-text-color-actived{
+  color:rgba(255, 255, 255, 1);
+}
+
+.nav-text-color:hover, 
+.tittle:hover{
+  color: rgb(255, 255, 255);
+  position: relative;
+  right: 1px;
+  bottom: 1px;
+  background-color: ;
+} 
+
+.logo_tittle{
+  display: flex;
+  align-items: center;
+  margin: 6px 0;
+}
+
+
+.tittle{
+  color: rgba(255, 230, 193, 1);
+  font-weight: 700;
+  font-size: 2em;
+  font-family: "Audiowide", sans-serif;
+}
+.navList{
+  list-style: none;
+  display: flex;
+  gap:10px;
+  padding-bottom: 9px;
+  font-size: 1em;
+  font-family: "Audiowide", sans-serif;
+}
+
+a{
+  text-decoration: none;
+  color: rgba(255, 230, 193, 1);
+}
+
+
+@media screen and (min-width: 768px) {
+  .logo_tittle{
+      flex-grow: 1;
+      margin-left: 10px;
+
+  }
+  .nav{
+      flex-direction: row;
+      align-items: center;
+  }
+  .navList{
+    padding-bottom: 0;
+    margin-right: 10px;
+  }
+
+}
+
+
+/* end ofheader-nav */
+
 /* background color */
-
 body{
-    background-color: rgba(27, 32, 45, 1) !important;
+    background-color: rgba(27, 32, 45, 1);
+    color: rgba(255, 230, 193, 1); 
+    
+
 }
 
+
+
+/* container */
+.container{
+  width: 100%;
+  margin-right:auto;
+  margin-left: auto;
+}
+@media screen and (min-width: 576px) {
+  .container{
+    max-width: 540px;
+  }
+
+}
+@media (min-width: 768) {
+  .container{
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container{
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container{
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400) {
+  .container{
+    max-width: 1320px;
+  }
+}
+
+
+
+.text-uppercase{
+  text-transform: uppercase;
+}
 /* banner position */
 .big_banner {
   padding-top: 100px;
@@ -51,19 +220,16 @@ body{
 /* hello world */
 .hello_w {
   position: relative;
-
-  left: 200px;
-
+  left: 130px;
   color: rgb(255, 255, 255);
   font-size: 2em;
   font-family: "Audiowide", sans-serif;
 }
 /* creative and inovation */
 .creat_innov {
-  
   position: relative;
-  left: 200px;
-  top: 30px;
+  left: 130px;
+line-height: 1.5;
   color: rgba(255, 230, 193, 1);
   font-size: 3.5em;
   font-family: "League Script", cursive;
@@ -77,9 +243,9 @@ body{
 
 .develper {
   position: relative;
-  left: 200px;
+  left: 130px;
   display: inline-block;
-
+line-height: 1.5;
   color: rgba(255, 95, 90, 1);
   font-size: 8em;
   font-family: "Times New Roman", serif;
@@ -98,8 +264,9 @@ body{
   font-family: "Times New Roman", serif;
   text-align: right;
   position: relative;
-  bottom: 30px;
-  right: 400px;
+  line-height: 2;
+
+  right: 200px;
 }
 
 @media (max-width: 992px) {
@@ -248,9 +415,9 @@ html {
   line-height: 1em;
 }
 
-#section2{
+/* #section2{
   height: 100vh;
-}
+} */
 .wrapper{
   padding-top: 80px;
   display: flex;
@@ -261,49 +428,98 @@ html {
 }
 
 
-.card{
+.context{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* grid-auto-rows: minmax(50px, auto); */
+  row-gap: 20px;
+  column-gap: 9px;
+  padding-top: 30px;
   
-  width: 300px;
-  height: 70vh;
-  overflow: auto;
+}
+
+.card-img-top{
+  object-fit: cover;
+  width: 100%;
+  
+}
+
+.card{
+  padding:0;
+  margin-left: auto;
+  margin-right: auto;
+
+  min-height: 400px;
+  display: grid;
+  grid-template-columns: 1fr;
   background-color: rgba(255,255,255,0.2) !important;
-  opacity: 0.7;
+  opacity: 0.8;
+  align-content:start;
+  /* box-shadow: 0 0 5px rgba(255, 255, 255, 0.4); */
+  /* border: 1px solid white; */
 
 }
 
 
-@media (max-width: 992px) {
-  .wrapper {
-   flex-wrap:wrap;
-  }
-  .card{
-    height: 60vh;
-  }
-}
 
-@media (max-width: 700px) {
-
-  .card{
-    height: 100%;
-  }
-}
 
 .card:hover{
-  transition: all 0.5s ease-in-out;
-
+  /* transition: all 0.5s ease-in; */
   opacity: 1;
+  position: relative;
+  right: 1px;
+  bottom:1px;
+  box-shadow: 5px 5px 15px 3px rgba(255, 230, 193, 0.3);
 }
 
-.card-body{
-  color: rgba(255, 230, 193, 1) !important;
-  
-} 
 
-@media (max-width: 992px) {
+
+.card-title{
+  font-family: "Audiowide", sans-serif;
+  line-height: 1.5;
+  font-size: 1.1em;
+  text-align: center;
+}
+
+.card-text{
+  font-family: sans-serif;
+  line-height: 1.5;
+  padding: 20px 5px;
+  text-align: justify;
+
+}
+
+@media (max-width: 650px){
+  .card{
+    margin: 0 20px;
+  }
+}
+
+.card-grid:first-child{
+
+  height: fit-content;
+  
+}
+
+.card-grid:last-child{
+padding: 10px 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* @media (max-width: 992px) {
 .section2{
   visibility: hidden;
 }
-}
+} */
 
 
 .wrapper3{
@@ -337,17 +553,19 @@ html {
   position: relative;
   color: rgba(255, 95, 90, 1);
   font-size: 8em;
+  line-height: 2;
   font-family: "Times New Roman", serif;
 }
 .introduction{
     position: relative;
     width: 50%;
+    font-size: 1.1em;
+    line-height: 1.3;
 }
 
 @media (max-width: 992px) {
  
   .about {
-
 
     top: 0px;
     left: 0px;
@@ -362,11 +580,23 @@ html {
   .introduction{
     position: relative;
     width: 100%;
+    
+}
+.wrapper3{
+  padding: 0 15px;
 }
 
 }
 
-
-.text-color-default{
-  color: rgba(255, 230, 193, 1) !important;
+.myEmail{
+  display: flex;
+  align-items: center;
 }
+
+
+.myEmail>a:hover{
+  position: relative;
+  right: 1px;
+  bottom: 1px;
+  color: white;
+}\
